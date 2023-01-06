@@ -1,0 +1,65 @@
+---
+title: "ac"
+author: "Harisriguhan Sivakumar 31386709"
+date: "27/10/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+df <- read_csv("UsersClean.csv")
+df
+```
+
+```{r}
+get_range <- function(age){
+  
+  if (age < 13){
+    return("less than 13 years")
+  }
+  else if (age >= 13 && age < 18){
+    return("13 - 17 years")
+  }
+  else if (age >= 18 && age < 30){
+    return("18 - 29 years")
+  }
+  else{
+    return("30 + years")
+  }
+}
+```
+
+```{r}
+x <- df$age
+x <- unlist(lapply(x,get_range))
+```
+
+```{r}
+df$age <- x
+df
+```
+
+```{r}
+df[grepl("<*>",df$Location_Name),]
+```
+
+```{r}
+df2 <- read_csv("GlobalMktShare.csv")
+df2
+```
+```{r}
+x <- unique(df2$location)
+```
+
+```{r}
+df <- df[df$location %in% x,]
+```
+
+
+```{r}
+write.csv(df,"UsersClean.csv",row.names = F)
+```
+

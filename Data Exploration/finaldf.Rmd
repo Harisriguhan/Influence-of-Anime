@@ -1,0 +1,27 @@
+---
+title: "final dataset"
+author: "Harisriguhan Sivakumar 31386709"
+date: "07/09/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+UALxUser <- read_csv("UALxUser.csv")
+```
+
+```{r}
+Anime <- read_csv("AnimeListFiltered.csv")
+```
+
+```{r}
+UALxUserxAnime <- merge(UALxUser,Anime[c("anime_id","title","title_english")],by = "anime_id")
+```
+
+```{r}
+write.csv(UALxUserxAnime,"UALxUserxAnime.csv",row.names = F)
+```
+

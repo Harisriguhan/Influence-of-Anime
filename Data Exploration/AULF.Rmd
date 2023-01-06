@@ -1,0 +1,35 @@
+---
+title: "AULF"
+author: "Harisriguhan Sivakumar 31386709"
+date: "25/10/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+UALF <- read_csv("UserAnimeListFiltered.csv")
+```
+
+```{r}
+UALF <- UALF[!(UALF$my_start_date %in% c(NA)),]
+```
+
+```{r}
+dates <- format(UALF$my_start_date, format = "%Y")
+```
+
+```{r}
+UALF$my_start_date <- dates
+```
+
+```{r}
+UALF$my_start_date
+```
+
+```{r}
+write.csv(UALF,"UserAnimeclean.csv",row.names=F)
+```
+

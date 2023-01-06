@@ -1,0 +1,45 @@
+---
+title: "amkt"
+author: "Harisriguhan Sivakumar 31386709"
+date: "29/10/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+df<- read_csv("UserAnimeclean.csv")
+df
+```
+
+```{r}
+df_mktshr <- df %>% group_by(anime_id) %>% summarise( mktshare = n()*100/10508094 )
+df_mktshr
+```
+```{r}
+df_views <- df %>% group_by(my_start_date) %>% summarise( views = n() )
+df_views
+```
+```{r}
+df_views <- df_views[df_views$my_start_date >= 1990 & df_views$my_start_date <= 2018,]
+df_views
+```
+```{r}
+write.csv(df_views,"AnimeViews.csv",row.names = F)
+```
+
+```{r}
+Animes <- read_csv("AnimeListClean.csv")
+Animes
+```
+
+```{r}
+anime_stats <- merge(Animes,df_mktshr)
+anime_stats
+```
+
+```{r}
+write.csv(anime_stats,"AnimeStats.csv",row.names = F)
+```

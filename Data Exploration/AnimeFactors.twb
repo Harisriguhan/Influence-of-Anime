@@ -1,0 +1,3822 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0712.0907                               -->
+<workbook original-version='18.1' source-build='2021.2.1 (20212.21.0712.0907)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Genre' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Shounen&quot;'>
+        <calculation class='tableau' formula='&quot;Shounen&quot;' />
+        <members>
+          <member value='&quot;Comedy&quot;' />
+          <member value='&quot;Supernatural&quot;' />
+          <member value='&quot;Romance&quot;' />
+          <member value='&quot;Shounen&quot;' />
+          <member value='&quot;Parody&quot;' />
+          <member value='&quot;School&quot;' />
+          <member value='&quot;Magic&quot;' />
+          <member value='&quot;Shoujo&quot;' />
+          <member value='&quot;Drama&quot;' />
+          <member value='&quot;Fantasy&quot;' />
+          <member value='&quot;Kids&quot;' />
+          <member value='&quot;Action&quot;' />
+          <member value='&quot;Music&quot;' />
+          <member value='&quot;Slice of Life&quot;' />
+          <member value='&quot;Josei&quot;' />
+          <member value='&quot;Harem&quot;' />
+          <member value='&quot;Shounen Ai&quot;' />
+          <member value='&quot;Adventure&quot;' />
+          <member value='&quot;Super Power&quot;' />
+          <member value='&quot;Sci-Fi&quot;' />
+          <member value='&quot;Ecchi&quot;' />
+          <member value='&quot;Seinen&quot;' />
+          <member value='&quot;Martial Arts&quot;' />
+          <member value='&quot;Game&quot;' />
+          <member value='&quot;Sports&quot;' />
+          <member value='&quot;Demons&quot;' />
+          <member value='&quot;Historical&quot;' />
+          <member value='&quot;Horror&quot;' />
+          <member value='&quot;Mystery&quot;' />
+          <member value='&quot;Samurai&quot;' />
+          <member value='&quot;Hentai&quot;' />
+          <member value='&quot;Space&quot;' />
+          <member value='&quot;Mecha&quot;' />
+          <member value='&quot;Psychological&quot;' />
+          <member value='&quot;Police&quot;' />
+          <member value='&quot;Vampire&quot;' />
+          <member value='&quot;Military&quot;' />
+          <member value='&quot;Thriller&quot;' />
+          <member value='&quot;NA&quot;' />
+          <member value='&quot;Yaoi&quot;' />
+          <member value='&quot;Cars&quot;' />
+          <member value='&quot;Shoujo Ai&quot;' />
+          <member value='&quot;Dementia&quot;' />
+          <member value='&quot;Yuri&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='AnimeListFiltered' inline='true' name='federated.1mkng7u04pcm07198cthx144tp01' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AnimeListFiltered' name='textscan.16ftaaf0qzzyyj19f5see19xfuwq'>
+            <connection class='textscan' directory='D:/Monash/Semester 2/FIT5147/Assignments/DEP' filename='AnimeListFiltered.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.16ftaaf0qzzyyj19f5see19xfuwq' name='AnimeListFiltered.csv' table='[AnimeListFiltered#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='anime_id' ordinal='0' />
+            <column datatype='string' name='title' ordinal='1' />
+            <column datatype='string' name='title_english' ordinal='2' />
+            <column datatype='string' name='type' ordinal='3' />
+            <column datatype='string' name='source' ordinal='4' />
+            <column datatype='integer' name='episodes' ordinal='5' />
+            <column datatype='string' name='status' ordinal='6' />
+            <column datatype='integer' name='Duration_in_Minutes' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='real' name='score' ordinal='9' />
+            <column datatype='string' name='studio' ordinal='10' />
+            <column datatype='boolean' name='Comedy' ordinal='11' />
+            <column datatype='boolean' name='Supernatural' ordinal='12' />
+            <column datatype='boolean' name='Romance' ordinal='13' />
+            <column datatype='boolean' name='Shounen' ordinal='14' />
+            <column datatype='boolean' name='Parody' ordinal='15' />
+            <column datatype='boolean' name='School' ordinal='16' />
+            <column datatype='boolean' name='Magic' ordinal='17' />
+            <column datatype='boolean' name='Shoujo' ordinal='18' />
+            <column datatype='boolean' name='Drama' ordinal='19' />
+            <column datatype='boolean' name='Fantasy' ordinal='20' />
+            <column datatype='boolean' name='Kids' ordinal='21' />
+            <column datatype='boolean' name='Action' ordinal='22' />
+            <column datatype='boolean' name='Music' ordinal='23' />
+            <column datatype='boolean' name='Slice of Life' ordinal='24' />
+            <column datatype='boolean' name='Josei' ordinal='25' />
+            <column datatype='boolean' name='Harem' ordinal='26' />
+            <column datatype='boolean' name='Shounen Ai' ordinal='27' />
+            <column datatype='boolean' name='Adventure' ordinal='28' />
+            <column datatype='boolean' name='Super Power' ordinal='29' />
+            <column datatype='boolean' name='Sci-Fi' ordinal='30' />
+            <column datatype='boolean' name='Ecchi' ordinal='31' />
+            <column datatype='boolean' name='Seinen' ordinal='32' />
+            <column datatype='boolean' name='Martial Arts' ordinal='33' />
+            <column datatype='boolean' name='Game' ordinal='34' />
+            <column datatype='boolean' name='Sports' ordinal='35' />
+            <column datatype='boolean' name='Demons' ordinal='36' />
+            <column datatype='boolean' name='Historical' ordinal='37' />
+            <column datatype='boolean' name='Horror' ordinal='38' />
+            <column datatype='boolean' name='Mystery' ordinal='39' />
+            <column datatype='boolean' name='Samurai' ordinal='40' />
+            <column datatype='boolean' name='Hentai' ordinal='41' />
+            <column datatype='boolean' name='Space' ordinal='42' />
+            <column datatype='boolean' name='Mecha' ordinal='43' />
+            <column datatype='boolean' name='Psychological' ordinal='44' />
+            <column datatype='boolean' name='Police' ordinal='45' />
+            <column datatype='boolean' name='Vampire' ordinal='46' />
+            <column datatype='boolean' name='Military' ordinal='47' />
+            <column datatype='boolean' name='Thriller' ordinal='48' />
+            <column datatype='boolean' name='NA' ordinal='49' />
+            <column datatype='boolean' name='Yaoi' ordinal='50' />
+            <column datatype='boolean' name='Cars' ordinal='51' />
+            <column datatype='boolean' name='Shoujo Ai' ordinal='52' />
+            <column datatype='boolean' name='Dementia' ordinal='53' />
+            <column datatype='boolean' name='Yuri' ordinal='54' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.16ftaaf0qzzyyj19f5see19xfuwq' name='AnimeListFiltered.csv' table='[AnimeListFiltered#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='anime_id' ordinal='0' />
+            <column datatype='string' name='title' ordinal='1' />
+            <column datatype='string' name='title_english' ordinal='2' />
+            <column datatype='string' name='type' ordinal='3' />
+            <column datatype='string' name='source' ordinal='4' />
+            <column datatype='integer' name='episodes' ordinal='5' />
+            <column datatype='string' name='status' ordinal='6' />
+            <column datatype='integer' name='Duration_in_Minutes' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='real' name='score' ordinal='9' />
+            <column datatype='string' name='studio' ordinal='10' />
+            <column datatype='boolean' name='Comedy' ordinal='11' />
+            <column datatype='boolean' name='Supernatural' ordinal='12' />
+            <column datatype='boolean' name='Romance' ordinal='13' />
+            <column datatype='boolean' name='Shounen' ordinal='14' />
+            <column datatype='boolean' name='Parody' ordinal='15' />
+            <column datatype='boolean' name='School' ordinal='16' />
+            <column datatype='boolean' name='Magic' ordinal='17' />
+            <column datatype='boolean' name='Shoujo' ordinal='18' />
+            <column datatype='boolean' name='Drama' ordinal='19' />
+            <column datatype='boolean' name='Fantasy' ordinal='20' />
+            <column datatype='boolean' name='Kids' ordinal='21' />
+            <column datatype='boolean' name='Action' ordinal='22' />
+            <column datatype='boolean' name='Music' ordinal='23' />
+            <column datatype='boolean' name='Slice of Life' ordinal='24' />
+            <column datatype='boolean' name='Josei' ordinal='25' />
+            <column datatype='boolean' name='Harem' ordinal='26' />
+            <column datatype='boolean' name='Shounen Ai' ordinal='27' />
+            <column datatype='boolean' name='Adventure' ordinal='28' />
+            <column datatype='boolean' name='Super Power' ordinal='29' />
+            <column datatype='boolean' name='Sci-Fi' ordinal='30' />
+            <column datatype='boolean' name='Ecchi' ordinal='31' />
+            <column datatype='boolean' name='Seinen' ordinal='32' />
+            <column datatype='boolean' name='Martial Arts' ordinal='33' />
+            <column datatype='boolean' name='Game' ordinal='34' />
+            <column datatype='boolean' name='Sports' ordinal='35' />
+            <column datatype='boolean' name='Demons' ordinal='36' />
+            <column datatype='boolean' name='Historical' ordinal='37' />
+            <column datatype='boolean' name='Horror' ordinal='38' />
+            <column datatype='boolean' name='Mystery' ordinal='39' />
+            <column datatype='boolean' name='Samurai' ordinal='40' />
+            <column datatype='boolean' name='Hentai' ordinal='41' />
+            <column datatype='boolean' name='Space' ordinal='42' />
+            <column datatype='boolean' name='Mecha' ordinal='43' />
+            <column datatype='boolean' name='Psychological' ordinal='44' />
+            <column datatype='boolean' name='Police' ordinal='45' />
+            <column datatype='boolean' name='Vampire' ordinal='46' />
+            <column datatype='boolean' name='Military' ordinal='47' />
+            <column datatype='boolean' name='Thriller' ordinal='48' />
+            <column datatype='boolean' name='NA' ordinal='49' />
+            <column datatype='boolean' name='Yaoi' ordinal='50' />
+            <column datatype='boolean' name='Cars' ordinal='51' />
+            <column datatype='boolean' name='Shoujo Ai' ordinal='52' />
+            <column datatype='boolean' name='Dementia' ordinal='53' />
+            <column datatype='boolean' name='Yuri' ordinal='54' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;ibm-5348_P100-1997&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>anime_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[anime_id]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>anime_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_english</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title_english]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>title_english</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>source</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>episodes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[episodes]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>episodes</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Duration_in_Minutes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Duration_in_Minutes]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Duration_in_Minutes</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>score</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>studio</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[studio]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>studio</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comedy</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Comedy]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Comedy</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supernatural</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Supernatural]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Supernatural</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Romance</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Romance]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Romance</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shounen</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Shounen]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Shounen</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Parody</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Parody]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Parody</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>School</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[School]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>School</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Magic</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Magic]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Magic</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shoujo</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Shoujo]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Shoujo</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Drama</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Drama]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Drama</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fantasy</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Fantasy]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Fantasy</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kids</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Kids]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Kids</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Action</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Action]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Action</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Music</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Music]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Music</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Slice of Life</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Slice of Life]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Slice of Life</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Josei</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Josei]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Josei</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Harem</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Harem]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Harem</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shounen Ai</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Shounen Ai]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Shounen Ai</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adventure</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Adventure]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Adventure</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Super Power</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Super Power]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Super Power</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sci-Fi</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Sci-Fi]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Sci-Fi</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ecchi</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Ecchi]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Ecchi</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Seinen</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Seinen]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Seinen</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Martial Arts</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Martial Arts]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Martial Arts</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Game</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Game]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Game</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sports</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Sports]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Sports</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Demons</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Demons]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Demons</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Historical</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Historical]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Historical</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Horror</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Horror]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Horror</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mystery</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Mystery]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Mystery</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Samurai</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Samurai]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Samurai</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hentai</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Hentai]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Hentai</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Space</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Space]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Space</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mecha</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Mecha]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Mecha</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Psychological</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Psychological]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Psychological</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Police</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Police]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Police</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vampire</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Vampire]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Vampire</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Military</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Military]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Military</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Thriller</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Thriller]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Thriller</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NA</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[NA]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>NA</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Yaoi</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Yaoi]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Yaoi</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cars</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Cars]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Cars</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shoujo Ai</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Shoujo Ai]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Shoujo Ai</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dementia</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Dementia]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Dementia</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Yuri</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Yuri]</local-name>
+            <parent-name>[AnimeListFiltered.csv]</parent-name>
+            <remote-alias>Yuri</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Genre' datatype='boolean' name='[Calculation_762234252124622848]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1] &#13;&#10;WHEN &quot;Shounen&quot; THEN [Shounen]&#13;&#10;WHEN &quot;Ecchi&quot; THEN [Ecchi] &#13;&#10;WHEN &quot;Comedy&quot; THEN [Comedy]&#13;&#10;WHEN &quot;Supernatural&quot; THEN [Supernatural]&#13;&#10;WHEN &quot;Romance&quot; THEN [Romance]&#13;&#10;WHEN &quot;Parody&quot; THEN [Parody]&#13;&#10;WHEN &quot;School&quot; THEN [School]&#13;&#10;WHEN &quot;Magic&quot; THEN [Magic]&#13;&#10;WHEN &quot;Shoujo&quot; THEN [Shoujo]&#13;&#10;WHEN &quot;Drama&quot; THEN [Drama]&#13;&#10;WHEN &quot;Fantasy&quot; THEN [Fantasy]&#13;&#10;WHEN &quot;Kids&quot; THEN [Kids]&#13;&#10;WHEN &quot;Action&quot; THEN [Action]&#13;&#10;WHEN &quot;Music&quot; THEN [Music]&#13;&#10;WHEN &quot;Slice of Life&quot; THEN [Slice of Life]&#13;&#10;WHEN &quot;Josei&quot; THEN [Josei]&#13;&#10;WHEN &quot;Harem&quot; THEN [Harem]&#13;&#10;WHEN &quot;Shounen Ai&quot; THEN [Shounen Ai]&#13;&#10;WHEN &quot;Adventure&quot; THEN [Adventure]&#13;&#10;WHEN &quot;Super Power&quot; THEN [Super Power]&#13;&#10;WHEN &quot;Sci-Fi&quot; THEN [Sci-Fi]&#13;&#10;WHEN &quot;Seinen&quot; THEN [Seinen]&#13;&#10;WHEN &quot;Martial Arts&quot; THEN [Martial Arts]&#13;&#10;WHEN &quot;Game&quot; THEN [Game]&#13;&#10;WHEN &quot;Sports&quot; THEN [Sports]&#13;&#10;WHEN &quot;Demons&quot; THEN [Demons]&#13;&#10;WHEN &quot;Historical&quot; THEN [Historical]&#13;&#10;WHEN &quot;Horror&quot; THEN [Horror]&#13;&#10;WHEN &quot;Mystery&quot; THEN [Mystery]&#13;&#10;WHEN &quot;Samurai&quot; THEN [Samurai]&#13;&#10;WHEN &quot;Hentai&quot; THEN [Hentai]&#13;&#10;WHEN &quot;Space&quot; THEN [Space]&#13;&#10;WHEN &quot;Mecha&quot; THEN [Mecha]&#13;&#10;WHEN &quot;Psychological&quot; THEN [Psychological]&#13;&#10;WHEN &quot;Police&quot; THEN [Police]&#13;&#10;WHEN &quot;Vampire&quot; THEN [Vampire]&#13;&#10;WHEN &quot;Military&quot; THEN [Military]&#13;&#10;WHEN &quot;Thriller&quot; THEN [Thriller]&#13;&#10;WHEN &quot;NA&quot; THEN [NA]&#13;&#10;WHEN &quot;Yaoi&quot; THEN [Yaoi]&#13;&#10;WHEN &quot;Cars&quot; THEN [Cars]&#13;&#10;WHEN &quot;Shoujo Ai&quot; THEN [Shoujo Ai]&#13;&#10;WHEN &quot;Dementia&quot; THEN [Dementia]&#13;&#10;END' />
+      </column>
+      <column caption='Duration in Minutes' datatype='integer' name='[Duration_in_Minutes]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='AnimeListFiltered.csv' datatype='table' name='[__tableau_internal_object_id__].[AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4]' role='measure' type='quantitative' />
+      <column caption='Anime Id' datatype='integer' name='[anime_id]' role='dimension' type='ordinal' />
+      <column caption='Episodes' datatype='integer' name='[episodes]' role='measure' type='quantitative' />
+      <column caption='Rating' datatype='string' name='[rating]' role='dimension' type='nominal' />
+      <column caption='Score' datatype='real' name='[score]' role='measure' type='quantitative' />
+      <column caption='Source' datatype='string' name='[source]' role='dimension' type='nominal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Studio' datatype='string' name='[studio]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Title English' datatype='string' name='[title_english]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <column-instance column='[Duration_in_Minutes]' derivation='None' name='[none:Duration_in_Minutes:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[studio]' derivation='None' name='[none:studio:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:studio:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;A-1 Pictures, Trigger, CloverWorks&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;AIC Spirits&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Animaruya&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Artland, TNK&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Barnum Studio, Silver Link., Connect&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;BOOTLEG&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Chiptune&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Daichi Doga, Dongyang Animation&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Echo&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Front Line&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Gainax, Studio Deen&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Gonzo, Palm Studio&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Heewon Entertainment&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Iyasakadou Film&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Jumondo&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Kitty Films&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Light Chaser Animation Studios&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Madhouse, Telecom Animation Film&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Milky Cartoon, LMD&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;NHK Enterprises&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;OLM Digital&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Ordet, W-Toon Studio&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Pine Jam&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Production I.G, M.S.C&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Project No.9, Tri-Slash&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Sanrio&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Shanghai Animation Film Studio&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Sparkly Key Animation Studio&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Studio Chizu&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Studio Flag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Studio Korumi&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Studio Ponoc&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Sunrise, Bandai Namco Pictures&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Tatsunoko Production, 10Gauge&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Three-d&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Toei Animation, Studio Nue&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Trigger&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Venet&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Xebec, Production Reed&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2:10 Animation&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Actas, TMS Entertainment&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AIC, Darts&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Arms, TNK&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Aubec&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Blue Cat&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;C2C, Lay-duce&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Creators in Pack, Namu Animation&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;domerica&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Enoki Films, Dai Nippon Printing&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gainax, feel.&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ginga Ya&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Group TAC, Japan Vistec&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Image House&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;J.C.Staff, Studio Ghibli&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Kenji Studio&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;L²Studio&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Madhouse, Production Reed&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MAPPA, Studio VOLN&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;NA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Oddjob&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Orange, Seven Arcs Pictures&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Phoenix Entertainment&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PPM&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Production I.G, Xebec, OLM&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ripple Film&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Science SARU&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Shueisha&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio 9 MAiami&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio Deen, Wit Studio&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio Gokumi, AXsiZ&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio Pierrot, D.A.S.T.&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio World&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SynergySP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Telecom Animation Film, Graphinica&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TNK&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Tomoyasu Murata Company&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TYO Animations, LIDENFILMS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Xebec Zwei&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;A-1 Pictures&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;AIC Build&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ajia-Do, Group TAC&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Artland, Madhouse&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;B&amp;amp;T&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bones, Production Reed&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chaos Project&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Cygames&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Dwango, LIDENFILMS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;feel., Zexcs&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gainax, Magic Bus&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gonzo, Asread&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Haoliners Animation League&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Indeprox&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Japan Vistec&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Kinema Citrus&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Lerche&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Madhouse, Studio Deen, Magic Bus&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Media Bank&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Neft Film&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Office Take Off&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ordet, LIDENFILMS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Picture Magic, Rikuentai&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;production doA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Production Reed&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Robot Communications, Imagica Image Works&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Seven Arcs Pictures&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Silver Link., Connect&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Studio Binzo&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Studio Fantasia, Amber Film Works&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Studio Junio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Studio Pierrot, Shin-Ei Animation&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Studio! Cucuri&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;TAKI Corporation&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Tezuka Productions&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Toei Animation&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Triangle Staff&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Usagi Ou&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Xebec, Group TAC&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;A.C.G.T.&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;AIC Spirits, Group TAC&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Anime Antenna Iinkai&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Asahi Production, Rising Force&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Bee Train&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Brain&amp;\#039;s Base, Marvy Jack&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Coastline Animation Studio&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;DAX Production&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Eiken&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Future Planet, Beijing Huihuang Animation Company&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;GARDEN LODGE&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Gonzo, ufotable&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Hoods Entertainment&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;J.C.Staff, Artland&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Kamikaze Douga&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;KOO-KI&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;M.S.C&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Madhouse, Toei Animation&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Minami Machi Bugyousho&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Nippon Animation, Shaft&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;OLM, OLM Digital, Sprite Animation Studios&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Palm Studio&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Platinum Vision&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Production I.G, OLM, Signal. MD&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Queen Bee&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Satelight, 8bit&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Shin-Ei Animation, DLE&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Steve N&amp;\#039; Steven, Rockwell Eyes&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Studio Comet, Zexcs&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Studio Gallop, Studio Comet&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Studio Matrix&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Studio Rikka, Purple Cow Studio Japan&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sunrise, Nakamura Production&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Tatsunoko Production, Ordet&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;TMS Entertainment, DLE&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Toei Video&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Triple X&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;W-Toon Studio, DMM.futureworks&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Yaoyorozu&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;A-1 Pictures, TROYCA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;AIC Spirits, Asread&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Animate Film&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Artmic&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Bee Media&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Bouncy&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ChuChu&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Darts&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Echoes&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Front Line, Studio G-1Neo&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Gainax, Tatsunoko Production&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Gonzo, Picture Magic&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;helo.inc&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;J.C.Staff&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Kachidoki Studio&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;KIZAWA Studio&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Lilix&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Madhouse, Tezuka Productions&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Millepensee&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Nice Boat Animation&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;OLM Digital, Signal. MD&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Oxybot&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Pink Pineapple&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Production I.G, Madhouse&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Public &amp;amp; Basic, Ripple Film&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SANZIGEN&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Shanghai Foch Film Culture Investment&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sparky Animation&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Studio Colorido&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Studio Flag, Studio Bogey&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Studio Kyuuma, Studio Kikan, Azeta Pictures&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Studio Ppuri&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sunrise, Bandai Visual&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Tatsunoko Production, CoMix Wave Films, FOREST Hunting One&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Thundray&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Toei Animation, Studio World&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Trinet Entertainment&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;View Works&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Y.O.U.C&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;A-1 Pictures, Bridge&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;AIC Classic&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ajia-Do, Studio Deen&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Artland, Magic Bus&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bandai Namco Pictures&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bones, Sanrio&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chaos Project, GANSIS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;D &amp;amp; D Pictures&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;dwarf&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Felix Film&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gainax, Production I.G&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gonzo, DandeLion Animation Studio LLC&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Haoliners Animation League, Pb Animation Co. Ltd.&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ishikawa Pro&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;JCF&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Kinema Citrus, EMT²&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Lerche, 10Gauge&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Madhouse, Studio Fantasia&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mili Pictures&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Next Media Animation&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Office Takeout&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ordet, Millepensee&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Pie in The Sky&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Production I.G&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Production Reed, Asahi Production&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Rockwell Eyes&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Seven Arcs, Seven Arcs Pictures&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Silver Link., Nexus&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Studio Blanc&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Studio Fantasia, Animate Film&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Studio Junio, Annapuru&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Studio Pierrot, Studio Deen&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sugar Boy, Blue Cat&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Tama Production&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Tezuka Productions, MAPPA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Toei Animation, Bridge&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Triangle Staff, Animate Film&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Usagi Ou, Studio Nanahoshi&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Xebec, Issen&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Actas, Studio 3Hz&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;AIC, Artmic, Darts&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Arms&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Asura Film&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Big Bang&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Buemon&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Creators Dot Com&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Doga Kobo&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;EMT²&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Gainax&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Genco, Triangle Staff&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Group TAC, G&amp;amp;G Entertainment&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;iDRAGONS Creative Studio&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;J.C.Staff, Production Reed&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Kazami Gakuen Koushiki Douga-bu&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Kyotoma&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Madhouse, MAPPA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MAPPA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Moss Design Unit&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;NUT&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Opera House&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;pH Studio&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Pops Inc.&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Production I.G, Trans Arts&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;REVOROOT&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SBS TV Production&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Shochiku Animation Institute&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Studio 4°C, Shirogumi&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Studio Deen, Studio Hibari&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Studio Ghibli, Studio Hibari&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Studio Pierrot, Ajia-Do&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Studio VOLN&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Sunwoo Entertainment&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Tele-Cartoon Japan&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;TMS Entertainment, TOCSIS&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Tomason&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Twilight Studio&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Wit Studio&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Zexcs, Studio A-CAT&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;8bit&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Agent 21&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;AIC, Remic&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Artland&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Automatic Flowers Studio&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Bones&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;C-Station&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Creators in Pack, Studio Lings&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Dongwoo A&amp;amp;E&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Fanworks&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Gainax, Fukushima Gainax&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;GoHands&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Group TAC, View Works&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Imagin&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;J.C.Staff, Tatsunoko Production&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Khara&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;LandQ studios&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Madhouse, Satelight, Graphinica&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Marvy Jack&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Namu Animation&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Odolttogi&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Orange, Studio 3Hz&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Picograph&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PRA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Production I.G, Zexcs&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ripromo&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SELFISH&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Shuka&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Studio A-CAT&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Studio Egg&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Studio Hibari&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Studio Pierrot, David Production&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Studio Z5, Studio March&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;T-Rex&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Telecom Animation Film, Shirogumi&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;TNK, Kinema Citrus&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Tonko House&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;TYPHOON GRAPHICS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Xebec, AIC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Actas, Brain&amp;\#039;s Base&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;AIC, Artmic&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;APPP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ashi Production&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Beijing Rocen Digital&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Bridge&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CoMix Wave Films, Haoliners Animation League&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Diomedea, Studio Blanc&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ekura Animal&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;G.CMay Animation &amp;amp; Film&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;GEN Productions&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Group TAC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;HS Pictures Studio&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;J.C.Staff, Nomad&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Karaku&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kyoto Animation, Sunrise&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Madhouse, Group TAC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Manglobe&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Mook Animation&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Nippon Animation, Xebec&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;OLM, Wit Studio&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Passione&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Pollyanna Graphics&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Production I.G, Studio 4°C, Shaft&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Radix, Marine Entertainment&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Satelight, ixtl&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Shirogumi, Encourage Films&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Studio 3Hz&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Studio Deen, Daume&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Studio Ghibli, Ajia-Do&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Studio Pierrot&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Studio Unicorn&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Sunrise, Telecom Animation Film&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tatsunoko Production, SynergySP, Seven&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;TMS Entertainment, Telecom Animation Film&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tokyo Media Connections&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tsukimidou&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;White Fox&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Zero-G Room&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;A-1 Pictures, CloverWorks&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;AIC Frontier&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ajia-Do, TMS Entertainment&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Artland, Nippon Animation&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Barnum Studio, Project No.9&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Bones, Sunrise&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Charaction&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;D.A.S.T.&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Dynamo Pictures&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Fifth Avenue&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gainax, Shaft&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gonzo, DLE&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Haoliners Animation League, Studio LAN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ishimori Entertainment&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Jinnis Animation Studios&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Kinema Citrus, Orange&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;LIDENFILMS&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Madhouse, Studio Gokumi&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Milky Animation Label&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Nexus&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Oh! Production&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ordet, SANZIGEN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Pierrot Plus&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Production I.G, Animate Film&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Project No.9&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Romanov Films&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Shaft&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SOEISHINSHA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Studio Bogey&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Studio Fantasia, Rabbit Gate&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Studio Khronos&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Studio Pierrot, Studio Gallop&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Sunrise&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Tamura Shigeru Studio&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;The Answer Studio&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Toei Animation, Daewon Media&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Triangle Staff, Studio Wombat&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Vasoon Animation&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Xebec, Kanaban Graphics&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ACC Production&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;AIC Takarazuka&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Anime R, Aubec&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Asahi Production, Shochiku Animation Institute&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Bee Train, Cookie Jar Entertainment&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Brain&amp;\#039;s Base, Platinum Vision&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Collaboration Works&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Digital Frontier&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Eiken, Studio Live&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;G-angle&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Gathering&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Graphinica&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Hoods Entertainment, Production IMS&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;J.C.Staff, Egg Firm&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Kamikaze Douga, Nishiki Studio&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Kyoto Animation&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Madhouse&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Madhouse, Tokyo Movie Shinsha&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Mirai Film&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Nippon Animation, Studio Gallop&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;OLM, P.A. Works&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Panda Factory&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Plum&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Production I.G, Polygon Pictures&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rabbit Machine&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Satelight, A-1 Pictures&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Shinkuukan&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sting Ray&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Studio Core&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Studio Gallop, Studio Deen&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Studio Meditation With a Pencil&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Studio Sign&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sunrise, Production Reed&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Tatsunoko Production, Production Reed, Asahi Production&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;TMS Entertainment, Jinnis Animation Studios&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;TOHO animation&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;TROYCA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;WAO World&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Yokohama Animation Lab&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Actas&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;AIC, Animate Film&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Anpro&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Asahi Production, Success Co.&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Bee Train, Production I.G, Madhouse, Studio 4°C&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Brain&amp;\#039;s Base, Studio A-CAT&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CoMix Wave Films&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Digital Media Lab&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Eiken, TYO Animations&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;G-Lam&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Gathering, Asahi Production&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Green Bunny&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Hoods Entertainment, teamKG&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;J.C.Staff, Kitty Films&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Kanaban Graphics&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Kyoto Animation, Animation Do&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Madhouse, DLE&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Magic Bus&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MMDGP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Nippon Animation, Studio WHO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;OLM, Production Reed&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Panda Factory, Studio PuYUKAI&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Plum, Magic Bus&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Production I.G, Production Reed&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Radix&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Satelight, C2C&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Shirogumi&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Strawberry Meets Pictures&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Studio Dadashow&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Studio Gallop, TMS Entertainment&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Studio Moriken&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Studio Take Off&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Sunrise, Studio Deen&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tatsunoko Production, Studio World&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;TMS Entertainment, Shin-Ei Animation&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tokyo Kids&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tsuburaya Productions, Trigger&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;WAO World, MooGoo&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Yumeta Company&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Actas, Production Reed&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;AIC, Artmic, Animate Film&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Arcs Create&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Asread&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Bibury Animation Studios&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Bridge, Husio Studio&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Craftar&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;DLE&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Emon, Blade&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;G&amp;amp;G Entertainment&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Genco, Radix&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Group TAC, Amuse&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Idea Factory&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;J.C.Staff, Production I.G&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Karasfilms&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Kyoto Animation, Tatsunoko Production&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Madhouse, Imagin&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Manglobe, Geno Studio&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Mook DLE&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Nomad&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Onionskin&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Pastel&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Polygon Pictures&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Production I.G, Studio Deen&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Remic&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Satelight, Production Reed&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Shirogumi, Shin-Ei Animation&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Studio 4°C&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Studio Deen, DAX Production&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Studio Ghibli, Polygon Pictures&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Studio Pierrot, AIC A.S.T.A.&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Studio Unicorn, Hiro Media&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sunrise, Toei Animation&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Team YokkyuFuman&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;TMS Entertainment, Tezuka Productions&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Tokyo Movie Shinsha&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;TUBA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Will Palette&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Zexcs&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Actas, SynergySP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;AIC, BeSTACK&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Arms, Studio Kikan&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;AT-2&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Blade&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;C2C&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Creators in Pack&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Doga Kobo, Orange&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Encourage Films&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Gainax, Asahi Production&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Geno Studio&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Group TAC, Ginga Ya&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;ILCA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;J.C.Staff, SANZIGEN&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Kazuki Production&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Kyotoma, Office Nobu&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Madhouse, Nexus&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MAPPA, Lapin Track&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Mushi Production&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;October Media&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Orange&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;pH Studio, D &amp;amp; D Pictures&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;PoRO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Production I.G, Xebec&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;RG Animation Studios&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Schoolzone&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Shogakukan Music &amp;amp; Digital Entertainment&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Studio 4°C, Sunrise&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Studio Deen, Studio Hibari, Production Reed&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Studio Gokumi&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Studio Pierrot, Arms&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Studio Wombat&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Suzuki Mirano&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Telecom Animation Film&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TMS Entertainment, Tokyo Kids, Minami Machi Bugyousho&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Tomovies&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TYO Animations&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Xebec&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;A-Line&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;AIC Spirits, BeSTACK&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Animate Film, Studio Kikan&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Artmic, Animate Film&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Bee Media, 81 Produce&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Boyan Pictures&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Circle Tribute&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Daume&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;EDGE&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fuji TV&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Gainax, Toei Animation&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Gonzo, Production I.G&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Himajin Planning&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;J.C.Staff, A.C.G.T.&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Kaeruotoko Shokai&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Knack Productions&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;LMD&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Madhouse, TMS Entertainment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Millepensee, GEMBA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Nippon Animation&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;OLM, AIC A.S.T.A.&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Oz&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Piso Studio&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Production I.G, NUT, REVOROOT&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Puzzle Animation Studio Limited&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SANZIGEN, LIDENFILMS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Shimogumi&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Square Enix&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Studio Comet&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Studio G-1Neo&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Studio LAN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Studio PuYUKAI&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Sunrise, Dongwoo A&amp;amp;E&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tatsunoko Production, Dongwoo A&amp;amp;E&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;TMS Entertainment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Toei Animation, Tatsunoko Production&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Trinet Entertainment, Picture Magic&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Visual 80&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Yamamura Animation, Inc.&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;A-1 Pictures, Ordet&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;AIC Plus+&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;An DerCen&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Artland, Tatsunoko Production&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Barnum Studio, Project No.9, Studio Blanc&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Bones, Telecom Animation Film&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Chippai&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Daewon Media&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;E&amp;amp;G Films&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Flavors Soft&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Gainax, Studio 4°C&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Gonzo, Gainax, Production I.G, Madhouse, Studio 4°C, Satelight, CoMix Wave Films&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;HeART-BIT&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ixtl, LIDENFILMS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Joker Films&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Kinema Citrus, White Fox&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Life Work&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Madhouse, Tatsunoko Production&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Milky Cartoon&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;NHK&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;OLM&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Ordet, Studio Moriken&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Piko Studio&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Production I.G, DLE&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Project No.9, A-Real&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sakura Create&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Shaft, TNK&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sotsu&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Studio Bogey, Public &amp;amp; Basic&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Studio Flad&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Studio Kikan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Studio Pierrot, Studio Hibari&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sunrise, Ascension&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Tatsunoko Production&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Think Corporation&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Toei Animation, Production Reed&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;TriF Studio&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Vega Entertainment&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Xebec, OLM&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;10Gauge&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AIC&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AIC, Studio Hakk&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Artland, AIC, Artmic&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AXsiZ&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bones, Kinema Citrus&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Calf Studio&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUCURI, Digital Network Animation&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DR Movie&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fanworks, Imagineer&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Gainax, J.C.Staff&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Gonzo&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Hal Film Maker&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Imagin, Studio Live&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;J.C.Staff, Toei Animation&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Khara, CyberConnect2&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Larx Entertainment&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Madhouse, Studio 4°C&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Mary Jane&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Natural High&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Office AO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ordet&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Picona&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Primastea&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Production IMS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rising Force&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Seven&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Signal. MD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Studio Anima&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Studio Eromatick&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Studio Hibari, Production Reed&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Studio Pierrot, Kyoto Animation&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Studio Zealot&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;T.P.O&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Telescreen BV&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;TNK, Production Reed&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Topcraft&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ufotable&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Xebec, Asread&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Actas, Bee Media&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;AIC, APPP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Anpro, teamKG&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Ascension&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Bee Train, Xebec&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;BreakBottle&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CoMix Wave Films, FOREST Hunting One&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Diomedea&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;EKACHI EPILKA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;G-Lam, Studio CA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Gathering, Lesprit&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;GRIZZLY&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Hotline&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;J.C.Staff, Life Work&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Kaname Productions&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Kyoto Animation, Production I.G, Shin-Ei Animation&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Madhouse, feel.&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Majin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MooGoo&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Nippon Animation, SynergySP, Shirogumi&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;OLM, Shin-Ei Animation&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Panmedia, Meruhensha&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Plus Heads&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Production I.G, SANZIGEN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Radix, Chaos Project&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Satelight, Encourage Films&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Shirogumi, EMT²&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Studio 1st&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Studio Deen&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Studio Ghibli&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Studio OX&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Studio UGOKI&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Sunrise, Studio Hibari&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Tatsunoko Production, SynergySP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;TMS Entertainment, Studio Comet&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Tokyo Kids, Minami Machi Bugyousho&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Tsuchida Productions&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Wawayu Animation&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Zero-G&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;A-Real&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;AIC Spirits, Digital Frontier&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Animate Film, Visual 80&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Asahi Production&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Bee Media, Code&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Brain&amp;\#039;s Base&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CloverWorks&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;David Production&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Egg&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Fukushima Gainax&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Gakken Eigakyoku&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Gonzo, Satelight&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Hoods Drifters Studio&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;J.C.Staff, Animate Film&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;KAGAYA Studio&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Kokusai Eigasha&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;M2&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Madhouse, TNK&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Minakata Laboratory&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Nippon Animation, Production Reed&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;OLM, OLM Digital&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;P.A. Works&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Planet&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Production I.G, OLM&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Qualia Animation&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Satelight&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Shin-Ei Animation&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Steve N&amp;\#039; Steven&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Studio Comet, KeyEast, REALTHING&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Studio Gallop&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Studio Live&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Studio Rikka&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Sunrise, Kino Production&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Tatsunoko Production, Eiken&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;TMS Entertainment, 3xCube&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Toei Animation, TMS Entertainment&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Trinet Entertainment, Studio Hibari&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;W-Toon Studio&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Yamato Works&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;33 Collective&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;AIC A.S.T.A.&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ajia-Do&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Artland, Hoods Entertainment&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Azeta Pictures&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bones, Production I.G, Studio 4°C, Toei Animation&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CG Year&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Cyclone Graphics inc&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;drop&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;feel.&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gainax, Madhouse&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gonzo, AIC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Hal Film Maker, TYO Animations&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Imagineer&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Japan Taps&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Khara, Trigger&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Lay-duce&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Madhouse, Studio Deen&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Marza Animation Planet&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NAZ&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Office DCI&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ordet, Encourage Films&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Picture Magic&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;PrimeTime&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Production IMS, Orange&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Robot Communications&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Seven Arcs&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Silver Link.&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Studio Animal&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Studio Fantasia&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Studio Jam&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Studio Pierrot, Pierrot Plus&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Studio Zero&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Takara Tomy A.R.T.S&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Tengu Kobo&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;TNK, Zero-G&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Trans Arts&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ufotable, feel., Studio Flag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Xebec, Genco, Triangle Staff&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Duration_in_Minutes:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>22</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>33</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>39</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>44</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>32</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>36</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>54</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>51</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>48</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>30</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>38</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>34</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>41</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>28</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>58</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>42</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>50</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>37</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>55</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>26</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>47</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>56</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>29</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>35</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>59</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>31</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>24</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>45</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>52</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>49</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>23</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>40</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>27</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>57</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>46</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>53</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>43</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Genre' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Shounen&quot;'>
+          <calculation class='tableau' formula='&quot;Shounen&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='AnimeListFiltered.csv' id='AnimeListFiltered.csv_CC43ED3867D5459FB7C084550AD1A4E4'>
+            <properties context=''>
+              <relation connection='textscan.16ftaaf0qzzyyj19f5see19xfuwq' name='AnimeListFiltered.csv' table='[AnimeListFiltered#csv]' type='table'>
+                <columns character-set='windows-1252' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='anime_id' ordinal='0' />
+                  <column datatype='string' name='title' ordinal='1' />
+                  <column datatype='string' name='title_english' ordinal='2' />
+                  <column datatype='string' name='type' ordinal='3' />
+                  <column datatype='string' name='source' ordinal='4' />
+                  <column datatype='integer' name='episodes' ordinal='5' />
+                  <column datatype='string' name='status' ordinal='6' />
+                  <column datatype='integer' name='Duration_in_Minutes' ordinal='7' />
+                  <column datatype='string' name='rating' ordinal='8' />
+                  <column datatype='real' name='score' ordinal='9' />
+                  <column datatype='string' name='studio' ordinal='10' />
+                  <column datatype='boolean' name='Comedy' ordinal='11' />
+                  <column datatype='boolean' name='Supernatural' ordinal='12' />
+                  <column datatype='boolean' name='Romance' ordinal='13' />
+                  <column datatype='boolean' name='Shounen' ordinal='14' />
+                  <column datatype='boolean' name='Parody' ordinal='15' />
+                  <column datatype='boolean' name='School' ordinal='16' />
+                  <column datatype='boolean' name='Magic' ordinal='17' />
+                  <column datatype='boolean' name='Shoujo' ordinal='18' />
+                  <column datatype='boolean' name='Drama' ordinal='19' />
+                  <column datatype='boolean' name='Fantasy' ordinal='20' />
+                  <column datatype='boolean' name='Kids' ordinal='21' />
+                  <column datatype='boolean' name='Action' ordinal='22' />
+                  <column datatype='boolean' name='Music' ordinal='23' />
+                  <column datatype='boolean' name='Slice of Life' ordinal='24' />
+                  <column datatype='boolean' name='Josei' ordinal='25' />
+                  <column datatype='boolean' name='Harem' ordinal='26' />
+                  <column datatype='boolean' name='Shounen Ai' ordinal='27' />
+                  <column datatype='boolean' name='Adventure' ordinal='28' />
+                  <column datatype='boolean' name='Super Power' ordinal='29' />
+                  <column datatype='boolean' name='Sci-Fi' ordinal='30' />
+                  <column datatype='boolean' name='Ecchi' ordinal='31' />
+                  <column datatype='boolean' name='Seinen' ordinal='32' />
+                  <column datatype='boolean' name='Martial Arts' ordinal='33' />
+                  <column datatype='boolean' name='Game' ordinal='34' />
+                  <column datatype='boolean' name='Sports' ordinal='35' />
+                  <column datatype='boolean' name='Demons' ordinal='36' />
+                  <column datatype='boolean' name='Historical' ordinal='37' />
+                  <column datatype='boolean' name='Horror' ordinal='38' />
+                  <column datatype='boolean' name='Mystery' ordinal='39' />
+                  <column datatype='boolean' name='Samurai' ordinal='40' />
+                  <column datatype='boolean' name='Hentai' ordinal='41' />
+                  <column datatype='boolean' name='Space' ordinal='42' />
+                  <column datatype='boolean' name='Mecha' ordinal='43' />
+                  <column datatype='boolean' name='Psychological' ordinal='44' />
+                  <column datatype='boolean' name='Police' ordinal='45' />
+                  <column datatype='boolean' name='Vampire' ordinal='46' />
+                  <column datatype='boolean' name='Military' ordinal='47' />
+                  <column datatype='boolean' name='Thriller' ordinal='48' />
+                  <column datatype='boolean' name='NA' ordinal='49' />
+                  <column datatype='boolean' name='Yaoi' ordinal='50' />
+                  <column datatype='boolean' name='Cars' ordinal='51' />
+                  <column datatype='boolean' name='Shoujo Ai' ordinal='52' />
+                  <column datatype='boolean' name='Dementia' ordinal='53' />
+                  <column datatype='boolean' name='Yuri' ordinal='54' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Factors'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AnimeListFiltered' name='federated.1mkng7u04pcm07198cthx144tp01' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Genre' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Shounen&quot;'>
+              <calculation class='tableau' formula='&quot;Shounen&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1mkng7u04pcm07198cthx144tp01'>
+            <column datatype='boolean' name='[Action]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Adventure]' role='dimension' type='nominal' />
+            <column caption='Genre' datatype='boolean' name='[Calculation_762234252124622848]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1] &#13;&#10;WHEN &quot;Shounen&quot; THEN [Shounen]&#13;&#10;WHEN &quot;Ecchi&quot; THEN [Ecchi] &#13;&#10;WHEN &quot;Comedy&quot; THEN [Comedy]&#13;&#10;WHEN &quot;Supernatural&quot; THEN [Supernatural]&#13;&#10;WHEN &quot;Romance&quot; THEN [Romance]&#13;&#10;WHEN &quot;Parody&quot; THEN [Parody]&#13;&#10;WHEN &quot;School&quot; THEN [School]&#13;&#10;WHEN &quot;Magic&quot; THEN [Magic]&#13;&#10;WHEN &quot;Shoujo&quot; THEN [Shoujo]&#13;&#10;WHEN &quot;Drama&quot; THEN [Drama]&#13;&#10;WHEN &quot;Fantasy&quot; THEN [Fantasy]&#13;&#10;WHEN &quot;Kids&quot; THEN [Kids]&#13;&#10;WHEN &quot;Action&quot; THEN [Action]&#13;&#10;WHEN &quot;Music&quot; THEN [Music]&#13;&#10;WHEN &quot;Slice of Life&quot; THEN [Slice of Life]&#13;&#10;WHEN &quot;Josei&quot; THEN [Josei]&#13;&#10;WHEN &quot;Harem&quot; THEN [Harem]&#13;&#10;WHEN &quot;Shounen Ai&quot; THEN [Shounen Ai]&#13;&#10;WHEN &quot;Adventure&quot; THEN [Adventure]&#13;&#10;WHEN &quot;Super Power&quot; THEN [Super Power]&#13;&#10;WHEN &quot;Sci-Fi&quot; THEN [Sci-Fi]&#13;&#10;WHEN &quot;Seinen&quot; THEN [Seinen]&#13;&#10;WHEN &quot;Martial Arts&quot; THEN [Martial Arts]&#13;&#10;WHEN &quot;Game&quot; THEN [Game]&#13;&#10;WHEN &quot;Sports&quot; THEN [Sports]&#13;&#10;WHEN &quot;Demons&quot; THEN [Demons]&#13;&#10;WHEN &quot;Historical&quot; THEN [Historical]&#13;&#10;WHEN &quot;Horror&quot; THEN [Horror]&#13;&#10;WHEN &quot;Mystery&quot; THEN [Mystery]&#13;&#10;WHEN &quot;Samurai&quot; THEN [Samurai]&#13;&#10;WHEN &quot;Hentai&quot; THEN [Hentai]&#13;&#10;WHEN &quot;Space&quot; THEN [Space]&#13;&#10;WHEN &quot;Mecha&quot; THEN [Mecha]&#13;&#10;WHEN &quot;Psychological&quot; THEN [Psychological]&#13;&#10;WHEN &quot;Police&quot; THEN [Police]&#13;&#10;WHEN &quot;Vampire&quot; THEN [Vampire]&#13;&#10;WHEN &quot;Military&quot; THEN [Military]&#13;&#10;WHEN &quot;Thriller&quot; THEN [Thriller]&#13;&#10;WHEN &quot;NA&quot; THEN [NA]&#13;&#10;WHEN &quot;Yaoi&quot; THEN [Yaoi]&#13;&#10;WHEN &quot;Cars&quot; THEN [Cars]&#13;&#10;WHEN &quot;Shoujo Ai&quot; THEN [Shoujo Ai]&#13;&#10;WHEN &quot;Dementia&quot; THEN [Dementia]&#13;&#10;END' />
+            </column>
+            <column datatype='boolean' name='[Cars]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Comedy]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Dementia]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Demons]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Drama]' role='dimension' type='nominal' />
+            <column caption='Duration in Minutes' datatype='integer' name='[Duration_in_Minutes]' role='measure' type='quantitative' />
+            <column datatype='boolean' name='[Ecchi]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Fantasy]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Game]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Harem]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Hentai]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Historical]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Horror]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Josei]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Kids]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Magic]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Martial Arts]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Mecha]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Military]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Music]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Mystery]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[NA]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Parody]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Police]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Psychological]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Romance]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Samurai]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[School]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Sci-Fi]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Seinen]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Shoujo Ai]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Shoujo]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Shounen Ai]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Shounen]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Slice of Life]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Space]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Sports]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Super Power]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Supernatural]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Thriller]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Vampire]' role='dimension' type='nominal' />
+            <column datatype='boolean' name='[Yaoi]' role='dimension' type='nominal' />
+            <column caption='Episodes' datatype='integer' name='[episodes]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_762234252124622848]' derivation='None' name='[none:Calculation_762234252124622848:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Duration_in_Minutes]' derivation='None' name='[none:Duration_in_Minutes:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[episodes]' derivation='None' name='[none:episodes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rating]' derivation='None' name='[none:rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[score]' derivation='None' name='[none:score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[studio]' derivation='None' name='[none:studio:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title_english]' derivation='None' name='[none:title_english:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type]' derivation='None' name='[none:type:nk]' pivot='key' type='nominal' />
+            <column caption='Rating' datatype='string' name='[rating]' role='dimension' type='nominal' />
+            <column caption='Score' datatype='real' name='[score]' role='measure' type='quantitative' />
+            <column caption='Studio' datatype='string' name='[studio]' role='dimension' type='nominal' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+            <column caption='Title English' datatype='string' name='[title_english]' role='dimension' type='nominal' />
+            <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mkng7u04pcm07198cthx144tp01].[none:Calculation_762234252124622848:nk]'>
+            <groupfilter function='member' level='[none:Calculation_762234252124622848:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1mkng7u04pcm07198cthx144tp01].[none:rating:nk]'>
+            <groupfilter function='level-members' level='[none:rating:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1mkng7u04pcm07198cthx144tp01].[none:studio:nk]'>
+            <groupfilter function='level-members' level='[none:studio:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1mkng7u04pcm07198cthx144tp01].[none:type:nk]'>
+            <groupfilter function='level-members' level='[none:type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1mkng7u04pcm07198cthx144tp01].[none:type:nk]</column>
+            <column>[federated.1mkng7u04pcm07198cthx144tp01].[none:Calculation_762234252124622848:nk]</column>
+            <column>[federated.1mkng7u04pcm07198cthx144tp01].[none:studio:nk]</column>
+            <column>[federated.1mkng7u04pcm07198cthx144tp01].[none:rating:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1mkng7u04pcm07198cthx144tp01].[none:Duration_in_Minutes:ok]' />
+              <lod column='[federated.1mkng7u04pcm07198cthx144tp01].[none:title:nk]' />
+              <lod column='[federated.1mkng7u04pcm07198cthx144tp01].[none:title_english:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Duration of an Episode:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1mkng7u04pcm07198cthx144tp01].[none:Duration_in_Minutes:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No of Episodes:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1mkng7u04pcm07198cthx144tp01].[none:episodes:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Score:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1mkng7u04pcm07198cthx144tp01].[none:score:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Title(Japanese):&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1mkng7u04pcm07198cthx144tp01].[none:title:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Title :&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1mkng7u04pcm07198cthx144tp01].[none:title_english:nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='2.1104972362518311' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1mkng7u04pcm07198cthx144tp01].[none:episodes:qk]</rows>
+        <cols>[federated.1mkng7u04pcm07198cthx144tp01].[none:score:qk]</cols>
+      </table>
+      <simple-id uuid='{9C82609E-7BD3-436D-828D-F80E5EE5D049}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Factors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1mkng7u04pcm07198cthx144tp01].[none:rating:nk]' type='filter' values='relevant' />
+            <card mode='dropdown' param='[federated.1mkng7u04pcm07198cthx144tp01].[none:studio:nk]' type='filter' values='relevant' />
+            <card mode='dropdown' param='[federated.1mkng7u04pcm07198cthx144tp01].[none:type:nk]' type='filter' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='2' param='[federated.1mkng7u04pcm07198cthx144tp01].[none:Duration_in_Minutes:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:Calculation_762234252124622848:nk]</field>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:Duration_in_Minutes:ok]</field>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:rating:nk]</field>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:score:qk]</field>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:studio:nk]</field>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:title:nk]</field>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:title_english:nk]</field>
+            <field>[federated.1mkng7u04pcm07198cthx144tp01].[none:type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A1153A32-D866-4F44-8B72-C9BC2E1254E6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Factors' width='192'>
+      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
+      TkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

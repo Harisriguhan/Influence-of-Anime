@@ -1,0 +1,40 @@
+---
+title: "Anime DEP"
+author: "Harisriguhan Sivakumar 31386709"
+date: "05/09/2021"
+output: pdf_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+UAL <- read_csv("UserAnimeList.csv")
+```
+```{r}
+names(UAL)
+```
+
+```{r}
+retain <- c("username","anime_id","my_watched_episodes","my_start_date","my_score","my_status")
+UAL <- UAL[retain]
+```
+
+
+```{r}
+UAL <- UAL[UAL$my_status %in% c(1,2,3,4),]
+```
+```{r}
+UAL <- UAL[c("username","anime_id","my_start_date","my_watched_episodes","my_score")]
+```
+
+
+```{r}
+UAL <- UAL[UAL$my_watched_episodes > 0,c("username","anime_id","my_start_date","my_score")]
+```
+
+```{r}
+write.csv(UAL,"UserAnimeListFiltered.csv",row.names = F)
+```
+

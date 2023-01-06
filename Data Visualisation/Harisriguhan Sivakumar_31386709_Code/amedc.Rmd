@@ -1,0 +1,79 @@
+---
+title: "amedc"
+author: "Harisriguhan Sivakumar 31386709"
+date: "29/10/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+df <- read_csv("AnimeStats.csv")
+df
+```
+
+```{r}
+df <- separate_rows(df,studio,sep=",\\s+")
+df
+```
+```{r}
+get_ed_range <- function(ed){
+  
+  if (ed < 11 | is.na(ed) ){
+    return("0 - 10 ")
+  }
+  else if (ed >= 11 && ed <= 20){
+    return("11 - 20")
+  }
+  else if (ed >= 21 && ed <= 30){
+    return("21 - 30 ")
+  }
+  else{
+    return("30 +")
+  }
+}
+```
+
+```{r}
+get_ed_range(NA)
+```
+
+```{r}
+df$Duration_in_Minutes <- unlist(lapply(df$Duration_in_Minutes,get_ed_range))
+```
+
+```{r}
+df
+```
+
+```{r}
+get_ep_range <- function(ed){
+  
+  if (ed < 13 | is.na(ed) ){
+    return("0 - 12 ")
+  }
+  else if (ed >= 13 && ed <= 30){
+    return("13 - 30")
+  }
+  else if (ed >= 31 && ed <= 100){
+    return("31 - 100 ")
+  }
+  else{
+    return("100 +")
+  }
+}
+```
+
+```{r}
+df$episodes <- unlist(lapply(df$episodes,get_ep_range))
+```
+
+```{r}
+df
+```
+```{r}
+write.csv(df,"AnimeStatsRefined.csv",row.names = F)
+```
+

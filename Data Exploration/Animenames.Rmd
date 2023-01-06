@@ -1,0 +1,99 @@
+---
+title: "Anime names filter"
+author: "Harisriguhan Sivakumar 31386709"
+date: "06/09/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+require(sjmisc)
+```
+
+```{r}
+anime <- read_csv("AnimeList.csv")
+anime
+```
+
+```{r}
+names(anime)
+```
+```{r}
+anime <- anime[c("anime_id","title","title_english","type","source","episodes","status","duration","rating","score","studio","genre")]
+anime
+```
+```{r}
+colnames(anime)
+```
+
+
+```{r}
+colnames(anime)[8]
+```
+
+```{r}
+colnames(anime)[8] <- "Duration_in_Minutes"
+colnames(anime)
+```
+
+```{r}
+extract_mins <- function(duration){
+  duration = strsplit(duration," ")[[1]][1]
+  return (as.integer(duration))
+}
+```
+```{r,warning=FALSE}
+anime["Duration_in_Minutes"] <- sapply(anime$Duration_in_Minutes, extract_mins)
+anime
+```
+
+```{r}
+require(tidyr)
+```
+
+```{r}
+separate_rows(anime,genre,sep=",\\s+")
+```
+
+
+
+```{r}
+anime <- separate_rows(anime,genre,sep=",\\s+")
+anime
+```
+
+
+```{r}
+anime[grepl("&#039;",anime$title),"title"]
+```
+```{r}
+anime[grepl("&#039;",anime$title_english),"title_english"]
+```
+
+
+```{r}
+anime["title"] <- gsub("&#039;","\'", anime$title)
+anime["title_english"] <- gsub("&#039;","\'", anime$title_english)
+```
+```{r}
+anime["title"] <-gsub("☆"," " ,anime$title)
+anime["title"] <-gsub("♥"," " ,anime$title)
+anime["title"] <-gsub("★"," " ,anime$title)
+anime["title"] <-gsub("◎"," " ,anime$title)
+anime["title"] <-gsub("♪"," " ,anime$title)
+anime["title_english"] <-gsub("☆"," " ,anime$title_english)
+anime["title_english"] <-gsub("♥"," " ,anime$title_english)
+anime["title_english"] <-gsub("★"," " ,anime$title_english)
+anime["title_english"] <-gsub("◎"," " ,anime$title_english)
+anime["title_english"] <-gsub("♪"," " ,anime$title_english)
+```
+
+
+```{r}
+write.csv(anime,"AnimeListFiltered.csv",row.names = F)
+```
+
+```{r}
+count(unique(anime))
+```
+

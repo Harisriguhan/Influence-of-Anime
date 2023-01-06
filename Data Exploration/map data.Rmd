@@ -1,0 +1,64 @@
+---
+title: "map data"
+author: "Harisriguhan Sivakumar 31386709"
+date: "27/10/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+df <- read_csv("UsersClean.csv")
+df
+```
+
+```{r}
+total = 60873
+```
+
+```{r}
+df[grepl("<*>",df$Location_Name),]
+```
+
+```{r}
+df <- df %>% group_by(location,Location_Name) %>% summarise( percent = n())
+df
+```
+
+```{r}
+df <- df[df$percent>500,]
+df
+```
+```{r}
+sum(df$percent)
+```
+```{r}
+df$percent <- round(df$percent/520,digits = 2)
+df
+```
+```{r}
+get_mkt_share <- function(per){
+  
+  if (per < 2.00){
+    return ("Low Market Share (less than 2% of the Global Market)")
+  }
+  else if (per > 5.00){
+    return ("High Market Share (more than 5% of the Global Market)")
+  }
+  else{
+    return ("Medium Market Share (between 2 to 5% of the Global Market)")
+  }
+}
+```
+
+```{r}
+df$mktshare <-  unlist(lapply(df$percent,get_mkt_share))
+df
+```
+
+```{r}
+write.csv(df,"GlobalMktShare.csv",row.names = F)
+```
+

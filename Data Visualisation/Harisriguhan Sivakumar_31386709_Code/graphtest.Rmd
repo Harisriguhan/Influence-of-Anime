@@ -1,0 +1,45 @@
+---
+title: "graphtests"
+author: "Harisriguhan Sivakumar 31386709"
+date: "27/10/2021"
+output: html_document
+---
+
+```{r}
+require(plotly)
+require(tidyverse)
+```
+```{r}
+df <- read_csv("GlobalMktShare.csv")
+df
+```
+
+```{r}
+require(maps)
+require(leaflet)
+```
+
+
+```{r}
+world = map()
+leaflet(data = world) %>% addTiles() %>%
+  addPolygons(fillColor = "blue", stroke = FALSE)
+```
+
+```{r}
+fig
+```
+
+```{r}
+
+fig <- plot_ly(
+  labels = c("Female","Male","India","Pakistan","X","Y"),
+  parents = c("", "", "Male", "Male", "Female", "Female"),
+  values = c(10, 14, 12, 10, 2, 6),
+  type = 'sunburst'
+)
+
+fig
+
+```
+

@@ -1,0 +1,76 @@
+---
+title: "sttocoun"
+author: "Harisriguhan Sivakumar 31386709"
+date: "25/10/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+users <- read_csv("UserList.csv")
+users
+```
+```{r}
+usersx <- read_csv("UsersFiltered.csv")
+usersx
+```
+
+```{r}
+users <- users[(users$username %in% usersx$username),]
+users <- users[c("username","birth_date")]
+users <- users[is.na(users$birth_date) == F,]
+users
+```
+```{r}
+userclean <- merge(usersx,users)
+userclean 
+```
+```{r}
+age <- as.numeric(difftime(as.Date("2018-12-31"),userclean$birth_date, units = "weeks"))/52.25
+```
+
+```{r}
+userclean$age <- round(age)
+userclean
+```
+```{r}
+userclean <- userclean[c("gender","location","Location_Name","age")]
+userclean
+```
+
+```{r}
+write.csv(userclean,"UsersClean.csv",row.names = F)
+```
+
+
+```{r}
+users <- read_csv("UserList.csv")
+users
+```
+
+```{r}
+users <- users[c("username","join_date")]
+users <- users[is.na(users$join_date) == F,]
+users
+```
+
+```{r}
+x <- format(users$join_date,"%Y")
+```
+
+```{r}
+users$join_date <- x
+users
+```
+```{r}
+users <- users %>% group_by(join_date) %>% summarise( users = n())
+```
+
+
+```{r}
+write.csv(users,"UsersJoin.csv",row.names = F)
+```
+
