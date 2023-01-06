@@ -1,0 +1,36 @@
+---
+title: "user anime join"
+author: "Harisriguhan Sivakumar 31386709"
+date: "06/09/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+UAL <- read_csv("UserAnimeListFiltered.csv")
+```
+
+```{r}
+users <- read_csv("UsersFiltered.csv")
+users
+```
+
+```{r}
+colnames(UAL)
+```
+
+```{r}
+colnames(users)
+```
+
+```{r}
+UALxUser <- merge(UAL,users,by = "username")
+```
+
+```{r}
+write.csv(UALxUser,"UALxUser.csv",row.names = F)
+```
+

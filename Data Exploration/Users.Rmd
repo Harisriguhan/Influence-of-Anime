@@ -1,0 +1,57 @@
+---
+title: "user filtering"
+author: "Harisriguhan Sivakumar 31386709"
+date: "06/09/2021"
+output: html_document
+---
+
+```{r}
+require(tidyverse)
+```
+
+```{r}
+users <- read_csv("UserList.csv")
+users
+```
+
+```{r}
+colnames(users)
+```
+
+```{r}
+users <- users[c("username","gender","location")]
+users
+```
+```{r}
+users <- users[is.na(users$location) == F,]
+users
+```
+
+```{r}
+require(countrycode)
+```
+```{r}
+cx <- users$location
+cxr <- countrycode(cx,origin = 'country.name', destination = 'country.name')
+users$location <- cxr
+```
+```{r}
+usersx <- users[is.na(users$location) == F,]
+usersx
+```
+```{r}
+usersy <- users[is.na(users$location) == T,]
+usersy
+```
+
+
+```{r}
+users["Location_Name"] <- countrycode(users$location,origin = 'iso3c', destination = 'country.name')
+users
+```
+
+
+```{r}
+write.csv(users,"UsersFiltered.csv",row.names = F)
+```
+
